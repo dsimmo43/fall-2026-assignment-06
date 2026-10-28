@@ -41,5 +41,8 @@
     "express": "^5.2.1",
     "kysely": "^0.29.6",
     "pg": "^8.23.0"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true
   }
 }
