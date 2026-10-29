@@ -174,7 +174,7 @@ function CommentsList({ articleId }: CommentsListProps) {
   }
 
   return (
-    <section>
+    <section className="comments-section">
       <h2>Comments</h2>
 
       {error && <p role="alert">{error}</p>}
@@ -185,7 +185,7 @@ function CommentsList({ articleId }: CommentsListProps) {
         <p>No comments yet.</p>
       ) : (
         comments.map((comment) => (
-          <div key={comment.commentId}>
+          <div key={comment.commentId} className="comment-card">
             {editingId === comment.commentId ? (
               <form
                 onSubmit={(e) =>
