@@ -1,6 +1,7 @@
 
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import CommentsList from "../components/CommentsList";
 
 interface Article {
   articleId: number;
@@ -115,9 +116,8 @@ function ArticleDetailPage() {
       {error && <p role="alert">{error}</p>}
 
       <hr />
-
-      <h2>Comments</h2>
-      <p>We'll implement comments in the next steps.</p>
+      
+      <CommentsList articleId={articleId!} />
     </main>
   );
 }
