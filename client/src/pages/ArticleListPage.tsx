@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 // Define the structure of an article
 interface Article {
-  id: number;
+  articleId: number;
   title: string;
   contents: string;
 }
@@ -90,7 +90,7 @@ function ArticleListPage() {
             <p>No articles found.</p>
           ) : (
             articles.map((article) => (
-              <article key={article.id}>
+              <article key={article.articleId}>
                 <h2>{article.title}</h2>
 
                 <p>
@@ -99,7 +99,7 @@ function ArticleListPage() {
                     : article.contents}
                 </p>
 
-                <Link to={`/articles/${article.id}`}>
+                <Link to={`/articles/${article.articleId}`}>
                   Read Article
                 </Link>
 

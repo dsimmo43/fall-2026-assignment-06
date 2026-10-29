@@ -41,7 +41,7 @@ function CreateArticlePage() {
       const newArticle = await response.json();
 
       // Navigate to the newly created article
-      navigate(`/articles/${newArticle.id}`);
+      navigate(`/articles/${newArticle.articleId}`);
     } catch {
       setError("Unable to create article. Please try again.");
     } finally {
