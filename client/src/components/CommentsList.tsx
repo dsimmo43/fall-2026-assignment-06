@@ -217,23 +217,24 @@ function CommentsList({ articleId }: CommentsListProps) {
               <>
                 <p>{comment.body}</p>
 
-                <button
-                  type="button"
-                  onClick={() => startEditing(comment)}
-                >
-                  Edit
-                </button>
+                <div className="comment-actions">
+                    <button
+                    type="button"
+                    onClick={() => startEditing(comment)}
+                    >
+                    Edit
+                    </button>
 
-                <button
-                  type="button"
-                  onClick={() => handleDeleteComment(comment.commentId)}
-                >
-                  Delete
-                </button>
-              </>
+                    <button
+                    type="button"
+                    onClick={() => handleDeleteComment(comment.commentId)}
+                    >
+                    Delete
+                    </button>
+                </div>
+                </>
             )}
 
-            <hr />
           </div>
         ))
       )}
